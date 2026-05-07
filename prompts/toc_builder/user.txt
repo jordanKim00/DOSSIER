@@ -1,0 +1,15 @@
+Document title: {doc_title}
+Total lines: {total_lines}
+
+Document text (line-numbered):
+{numbered_text}
+
+Build the hierarchical TOC for this document.
+
+Reminders:
+- `start_line` and `end_line` must be valid L-numbers from L0001 to L{total_lines:04d}.
+- The first leaf's start_line must be L0001.
+- The last leaf's end_line must be L{total_lines:04d}.
+- Consecutive leaves must meet: prev end_line + 1 == next start_line.
+- Parent ranges must exactly enclose their children.
+- Output a JSON object only with `toc` and `categories`. No other text.

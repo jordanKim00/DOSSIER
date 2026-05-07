@@ -1,0 +1,16 @@
+Question:
+{question}
+
+Instruction:
+{instruction}
+
+Document title list (DOC id → original document title):
+{doc_title_list}
+
+Projection map (DOC id → entity name):
+{projection_map}
+
+Composed analysis:
+{composed_json}
+
+Return ONLY the final answer. Follow the instruction's explicit format exactly (keys, units, precision, language, ordering). No commentary, no markdown fences, no preface or suffix.

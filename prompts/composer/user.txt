@@ -1,0 +1,11 @@
+Question:
+{question}
+
+Instruction:
+{instruction}
+
+Document title map:
+{doc_title_map}
+
+Per-document extracted evidence:
+{doc_sheets_text}

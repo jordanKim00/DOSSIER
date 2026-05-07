@@ -1,0 +1,991 @@
+{
+  "summary": {
+    "total": 98,
+    "scoring_success_rate": 1.0,
+    "avg_score": 83.6734693877551,
+    "perfect_count": 69,
+    "perfect_rate": 0.7040816326530612
+  },
+  "verdicts": [
+    {
+      "sample_id": "paper_level4_11",
+      "id": "9f29f552-c817-4c2a-8910-b5e8ae7c014f",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models \", \"# Fine-Tuning LLaMA for Multi-Stage Text Retrieval \", \"# Improving Text Embeddings with Large Language Models \"]",
+      "prediction": "[\"RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models\", \"Fine-Tuning LLaMA for Multi-Stage Text Retrieval\", \"Improving Text Embeddings with Large Language Models\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles in the gold answer. Since the titles are semantically identical and the list format is correct, the answer is accurate, complete, and free of hallucinations. The minor formatting difference does not affect the correctness of the citation chain.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_916",
+      "id": "7d301247-6dd6-494f-9771-65e887f5f0b9",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "913,610.87",
+      "prediction": "913,610.87 元",
+      "raw": "Evaluation evidence: The assistant's answer \"913,610.87 元\" is numerically identical to the gold answer \"913,610.87\". The addition of the currency unit \"元\" (Yuan) is contextually appropriate for a financial question regarding a Chinese company and does not constitute a hallucination or error. The response is accurate, complete, and directly addresses the user's query without unnecessary elaboration.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_914",
+      "id": "4276f382-bab0-484a-a789-a3531aaafd3d",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "74,341,718.39",
+      "prediction": "74,341,718.39 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (74,341,718.39). The addition of the currency unit \"元\" (Yuan) is contextually appropriate for a financial question regarding a Chinese company and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific value requested.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_29",
+      "id": "2357f6df-fed9-4508-a80c-800fe6995caa",
+      "type": "paper",
+      "level": 4,
+      "score": 60.0,
+      "gold": "[\"![](https://cdn.mathpix.com/cropped/2024_06_04_791d7ec1c70f2f7bcd44g-01.jpg?height=135&width=174&top_left_y=320&top_left_x=260)\", \"# Generative AI for Game Theory-based Mobile Networking \", \"# Exploring Equilibrium Strategies in Network Games with Generative AI \"]",
+      "prediction": "[\"Generative AI for Game Theory-based Mobile Networking\", \"Exploring Equilibrium Strategies in Network Games with Generative AI\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically consistent with the gold answer, correctly identifying the two paper titles in the proper citation order. However, it fails to include the first element of the gold answer, which appears to be a title represented by an image placeholder in the source data. By omitting this first paper, the assistant provides an incomplete citation chain (length 2 instead of 3), violating the requirement to list the longest chain and the completeness criterion.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "legal_level3_455",
+      "id": "5890dd07-c983-4ec2-bc72-7a8b86f96f41",
+      "type": "legal",
+      "level": 3,
+      "score": 20.0,
+      "gold": "{\"行政行为-行政许可\": [\"《判决文书7》\", \"《判决文书8》\", \"《判决文书9》\"], \"渎职罪\": [\"《判决文书12》\"], \"行政主体-司法行政管理（司法行政）\": [\"《判决文书2》\", \"《判决文书13》\"], \"行政主体-房屋拆迁管理（拆迁）\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书10》\"], \"破坏社会主义市场经济秩序罪\": [\"《判决文书11》\"], \"非刑事赔偿-错误执行赔偿\": [\"《判决文书4》\", \"《判决文书5》\", \"《判决文书6》\"]}",
+      "prediction": "{'行政行为 - 行政许可': ['《判决文书 7》', '《判决文书 8》', '《判决文书 9》'], '渎职罪': ['《判决文书 12》'], '行政主体 - 司法行政管理（司法行政）': ['《判决文书 2》'], '行政主体 - 房屋拆迁管理（拆迁）': ['《判决文书 1》', '《判决文书 3》', '《判决文书 4》', '《判决文书 10》'], '破坏社会主义市场经济秩序罪': ['《判决文书 5》', '《判决文书 11》'], '非刑事赔偿 - 错误执行赔偿': ['《判决文书 6》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant classification errors compared to the gold answer. Specifically, it misclassified \"判决文书 2\" (missing from Judicial Administration), \"判决文书 4\" (incorrectly placed in Demolition instead of Non-criminal Compensation), \"判决文书 5\" (incorrectly placed in Economic Crimes instead of Non-criminal Compensation), and \"判决文书 6\" (missing from Non-criminal Compensation). Additionally, the formatting of keys and values includes unnecessary spaces (e.g., '行政行为 - 行政许可' vs '行政行为-行政许可'), violating the strict format requirement. These errors result in low accuracy and completeness.\nRating: [[20]]"
+    },
+    {
+      "sample_id": "paper_level3_1",
+      "id": "c4a4e642-fa00-4377-a756-40f2f7ea7a74",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# A Survey of Hallucination in \\\"Large\\\" Foundation Models \"], \"Citation\": [\"# From Role-Play to Drama-Interaction: An LLM Solution \"]}",
+      "prediction": "{\"Reference\": [\"A Survey of Hallucination in \\\"Large\\\" Foundation Models\"], \"Citation\": [\"From Role-Play to Drama-Interaction: An LLM Solution\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the removal of the leading '#' character in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and all required information is present without hallucinations or omissions. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_25",
+      "id": "5d482043-88d2-4246-8191-e603b7bf6ed4",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# Data Filtering Networks \"], \"Citation\": [\"# ARVideo: Autoregressive Pretraining for Self-Supervised Video Representation Learning \"]}",
+      "prediction": "{\"Reference\": [\"Data Filtering Networks\"], \"Citation\": [\"ARVideo: Autoregressive Pretraining for Self-Supervised Video Representation Learning\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the removal of the \"#\" prefix in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing information are present. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_451",
+      "id": "b91d10e3-d5b9-47c0-a2e0-610c4c857f82",
+      "type": "legal",
+      "level": 3,
+      "score": 20.0,
+      "gold": "{\"行政行为-行政登记\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书13》\"], \"与公司，证券，保险，票据等有关的民事纠纷\": [\"《判决文书8》\", \"《判决文书11》\"], \"执行案由-先予执行\": [\"《判决文书5》\", \"《判决文书10》\", \"《判决文书12》\"], \"执行案由-对下级法院执行异议裁定的复议\": [\"《判决文书6》\"], \"行政行为-行政裁决\": [\"《判决文书7》\"], \"刑事赔偿\": [\"《判决文书2》\"], \"执行案由-其他案由\": [\"《判决文书4》\", \"《判决文书9》\"]}",
+      "prediction": "{'行政行为 - 行政登记': ['《判决文书 1》', '《判决文书 3》', '《判决文书 13》'], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书 8》', '《判决文书 11》'], '执行案由 - 先予执行': ['《判决文书 10》'], '执行案由 - 对下级法院执行异议裁定的复议': ['《判决文书 4》', '《判决文书 6》', '《判决文书 9》', '《判决文书 12》'], '行政行为 - 行政裁决': ['《判决文书 7》'], '刑事赔偿': ['《判决文书 2》'], '执行案由 - 其他案由': ['《判决文书 5》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant factual errors compared to the gold answer. It misclassified multiple documents: \"判决文书 5\" and \"判决文书 12\" were incorrectly moved from \"先予执行\" to \"其他案由\" and \"复议\" respectively; \"判决文书 4\" and \"判决文书 9\" were incorrectly moved from \"其他案由\" to \"复议\". Additionally, the formatting of keys and values includes unnecessary spaces (e.g., \"行政行为 - 行政登记\" vs \"行政行为-行政登记\"), violating the strict format requirement. The classification accuracy is poor.\nRating: [[20]]"
+    },
+    {
+      "sample_id": "paper_level4_5",
+      "id": "683f4cfd-1cfe-475d-927a-08a71d4f69e9",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Churn analysis using deep convolutional neural networks and autoencoders \", \"# Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis* \", \"# MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING \", \"# An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention \"]",
+      "prediction": "[\"Churn analysis using deep convolutional neural networks and autoencoders\", \"Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*\", \"MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING\", \"An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, listing the correct sequence of four paper titles. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles, which are likely formatting artifacts rather than part of the actual titles. The order, content, and completeness of the citation chain are accurate, with no hallucinations or missing elements. The response strictly adheres to the requested list format.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_907",
+      "id": "b9f53701-4f2f-4dc9-9df5-d40aca186028",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "39,334,577.43",
+      "prediction": "39,334,577.43 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (39,334,577.43). The addition of the currency unit \"元\" (Yuan) is contextually appropriate and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific question asked. The response strictly adheres to the provided information without unnecessary elaboration.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1050",
+      "id": "93040973-e3a2-4861-8dd7-650f7534d18e",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "迈克生物",
+      "prediction": "迈克生物股份有限公司",
+      "raw": "Evaluation evidence: The assistant's answer \"迈克生物股份有限公司\" is semantically identical to the gold answer \"迈克生物\", as the former is the full legal name of the latter. The response accurately identifies the company with the highest \"交易性金融资产\" without hallucinations or missing key information. It strictly follows the instruction to answer based on the provided content.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_23",
+      "id": "ecded47a-3741-4458-ba61-c04271c33651",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Very Deep Transformers for Neural Machine Translation \", \"# Understanding the Difficulty of Training Transformers \", \"# MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing \"]",
+      "prediction": "[\"Very Deep Transformers for Neural Machine Translation\", \"Understanding the Difficulty of Training Transformers\", \"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles. Since the core content (the paper titles and their sequence) is semantically identical and accurate, and no hallucinations or missing key points exist, the answer is fully suitable. The formatting difference is negligible and does not affect correctness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_485",
+      "id": "0c44b62e-4d91-4d31-8da5-ec183aecafe8",
+      "type": "legal",
+      "level": 3,
+      "score": 60.0,
+      "gold": "{\"物权保护纠纷\": [\"《判决文书3》\", \"《判决文书7》\"], \"合同，无因管理，不当得利纠纷\": [\"《判决文书1》\", \"《判决文书5》\"], \"侵权责任纠纷\": [\"《判决文书6》\", \"《判决文书8》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书4》\", \"《判决文书9》\"], \"行政行为-行政征收\": [\"《判决文书2》\"]}",
+      "prediction": "{'物权保护纠纷': ['《判决文书3》'], '合同，无因管理，不当得利纠纷': ['《判决文书1》', '《判决文书5》'], '侵权责任纠纷': ['《判决文书6》', '《判决文书7》', '《判决文书8》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书4》', '《判决文书9》'], '行政行为-行政征收': ['《判决文书2》']}",
+      "raw": "Evaluation evidence: The assistant failed to correctly classify \"《判决文书7》\". According to the gold answer, it belongs to \"物权保护纠纷\", but the assistant incorrectly placed it under \"侵权责任纠纷\". Additionally, the assistant missed \"《判决文书7》\" in the \"物权保护纠纷\" category, resulting in an incomplete and inaccurate classification. This violates the accuracy and completeness criteria.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "legal_level3_420",
+      "id": "149e82b2-3a24-41c1-a32e-e020164dc5b0",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"行政案件\": [\"《判决文书4》\"], \"民事案件\": [\"《判决文书2》\", \"《判决文书3》\", \"《判决文书7》\"], \"执行案件\": [\"《判决文书1》\"], \"赔偿案件\": [\"《判决文书5》\"], \"刑事案件\": [\"《判决文书6》\"]}",
+      "prediction": "{'行政案件': ['《判决文书4》'], '民事案件': ['《判决文书2》', '《判决文书3》', '《判决文书7》'], '执行案件': ['《判决文书1》'], '赔偿案件': ['《判决文书5》'], '刑事案件': ['《判决文书6》']}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the gold answer in terms of content, structure, and classification of all judgment documents. It correctly categorizes each document into the specified case types (Administrative, Civil, Execution, Compensation, Criminal) without any hallucinations or omissions. The format matches the user's request perfectly. Therefore, the answer is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_473",
+      "id": "6e4cdc05-2f12-48d7-83f4-597772c2666c",
+      "type": "legal",
+      "level": 3,
+      "score": 20.0,
+      "gold": "{\"行政主体-行政检查（监察）\": [\"《判决文书5》\"], \"行政行为-行政复议\": [\"《判决文书2》\", \"《判决文书3》\"], \"执行案由-民事\": [\"《判决文书4》\"], \"行政主体-民政行政管理（民政）\": [\"《判决文书1》\", \"《判决文书6》\"], \"行政行为-行政裁决\": [\"《判决文书7》\"]}",
+      "prediction": "{'行政主体-行政检查（监察）': [], '行政行为-行政复议': ['《判决文书2》', '《判决文书3》', '《判决文书5》'], '执行案由-民事': ['《判决文书4》'], '行政主体-民政行政管理（民政）': [], '行政行为-行政裁决': []}",
+      "raw": "Evaluation evidence: The assistant's answer is highly inaccurate compared to the gold standard. It failed to classify \"判决文书1\", \"判决文书6\", and \"判决文书7\" correctly, leaving their respective categories empty. It also incorrectly classified \"判决文书5\" under \"行政复议\" instead of \"行政检查（监察）\". The response misses key data points and contains classification errors, failing the accuracy and completeness criteria.\nRating: [[20]]"
+    },
+    {
+      "sample_id": "financial_level2_1061",
+      "id": "345f6e18-8a3a-46e3-9271-590f44a1756c",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "汤臣倍健",
+      "prediction": "汤臣倍健股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified \"汤臣倍健\" as the company with the highest deferred tax liability, matching the gold answer. The addition of \"股份有限公司\" (Co., Ltd.) is a formal elaboration of the company name and does not constitute a hallucination or error. The answer is accurate, complete, and directly addresses the user's question without unnecessary deviation.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_428",
+      "id": "f4876639-ba90-49d4-b177-5a4bab701e3e",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"民事案件\": [\"《判决文书2》\"], \"执行案件\": [\"《判决文书4》\"], \"行政案件\": [\"《判决文书1》\", \"《判决文书3》\"]}",
+      "prediction": "{'民事案件': ['《判决文书2》'], '执行案件': ['《判决文书4》'], '行政案件': ['《判决文书1》', '《判决文书3》']}",
+      "raw": "Evaluation evidence: The assistant's answer is identical to the gold answer in terms of content, structure, and classification. It correctly categorizes all four judgment documents into the specified types (Civil, Execution, Administrative) without any hallucinations or omissions. The format matches the requested dictionary structure perfectly. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_479",
+      "id": "5f31b9e6-8091-47da-893d-1d32c294b38a",
+      "type": "legal",
+      "level": 3,
+      "score": 40.0,
+      "gold": "{\"行政行为-行政强制\": [\"《判决文书4》\", \"《判决文书5》\"], \"妨碍社会管理秩序罪\": [\"《判决文书7》\"], \"执行案由-行政\": [\"《判决文书1》\", \"《判决文书6》\"], \"行政行为-行政补偿\": [\"《判决文书2》\"], \"海事海商纠纷\": [\"《判决文书3》\"]}",
+      "prediction": "{'行政行为-行政强制': ['《判决文书1》'], '妨碍社会管理秩序罪': ['《判决文书7》'], '执行案由-行政': ['《判决文书6》'], '行政行为-行政补偿': ['《判决文书2》', '《判决文书4》'], '海事海商纠纷': ['《判决文书3》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant accuracy errors compared to the gold answer. It incorrectly classified \"判决文书1\" and \"判决文书4\" (should be under '执行案由-行政' and '行政行为-行政强制' respectively) and missed \"判决文书5\" entirely. Additionally, it failed to include \"判决文书6\" in the correct category alongside \"判决文书1\" as per the gold standard. These misclassifications and omissions violate the accuracy and completeness criteria.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "financial_level2_1064",
+      "id": "e0007015-e0b3-4a25-a3c2-38715f07f430",
+      "type": "financial",
+      "level": 2,
+      "score": 0.0,
+      "gold": "2",
+      "prediction": "1",
+      "raw": "Evaluation evidence: The assistant's answer \"1\" is factually incorrect compared to the gold answer \"2\". The question asks for a specific count of companies, and the assistant failed to identify the correct number, resulting in a significant accuracy error. There is no hallucination in the sense of making up data, but the count is wrong, failing the accuracy criterion completely.\nRating: [[0]]"
+    },
+    {
+      "sample_id": "paper_level4_30",
+      "id": "aa9707c4-9506-4e51-899d-9213ad10a324",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Scaling Sentence Embeddings with Large Language Models \", \"# ANGLE-OPTIMIZED TEXT EMBEDDINGS \", \"# PromptMind Team at EHRSQL-2024: Improving Reliability of SQL Generation using Ensemble LLMs \"]",
+      "prediction": "[\"Scaling Sentence Embeddings with Large Language Models\", \"ANGLE-OPTIMIZED TEXT EMBEDDINGS\", \"PromptMind Team at EHRSQL-2024: Improving Reliability of SQL Generation using Ensemble LLMs\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles in the assistant's output. Since the core content (paper titles and sequence) is semantically identical and accurate, and no hallucinations or missing key points exist, the answer is fully suitable. The formatting difference is negligible regarding the task's semantic correctness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_471",
+      "id": "758d2060-9e92-4539-947f-4e63be32c935",
+      "type": "legal",
+      "level": 3,
+      "score": 90.0,
+      "gold": "{\"海事海商纠纷\": [\"《判决文书2》\", \"《判决文书5》\", \"《判决文书9》\"], \"执行案由-行政非诉执行\": [\"《判决文书3》\"], \"行政主体-房屋拆迁管理（拆迁）\": [\"《判决文书1》\", \"《判决文书4》\", \"《判决文书6》\"], \"刑事赔偿\": [\"《判决文书7》\", \"《判决文书10》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书8》\"]}",
+      "prediction": "{'海事海商纠纷': ['《判决文书2》', '《判决文书5》'], '执行案由-行政非诉执行': ['《判决文书3》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书1》', '《判决文书4》', '《判决文书6》'], '刑事赔偿': ['《判决文书7》', '《判决文书10》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书8》']}",
+      "raw": "Evaluation evidence: The assistant's answer is almost identical to the gold answer but fails to include \"《判决文书9》\" in the \"海事海商纠纷\" category. This omission constitutes a lack of completeness and an error in accuracy regarding the classification of all documents. While the format and other classifications are correct, missing one item prevents a perfect score.\nRating: [[90]]"
+    },
+    {
+      "sample_id": "legal_level3_417",
+      "id": "d980eb9b-79b0-4950-9f6c-3ec4a3c1c38f",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"民事案件\": [\"《判决文书10》\"], \"赔偿案件\": [\"《判决文书1》\", \"《判决文书6》\", \"《判决文书7》\"], \"行政案件\": [\"《判决文书4》\", \"《判决文书8》\"], \"执行案件\": [\"《判决文书3》\", \"《判决文书5》\"], \"刑事案件\": [\"《判决文书2》\", \"《判决文书9》\"]}",
+      "prediction": "{'民事案件': ['《判决文书10》'], '赔偿案件': ['《判决文书1》', '《判决文书6》', '《判决文书7》'], '行政案件': ['《判决文书4》', '《判决文书8》'], '执行案件': ['《判决文书3》', '《判决文书5》'], '刑事案件': ['《判决文书2》', '《判决文书9》']}",
+      "raw": "Evaluation evidence: The assistant's answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each case category. All keys (case types) and values (lists of document titles) match perfectly. There are no hallucinations, missing items, or formatting errors. The response strictly adheres to the requested output format and accurately reflects the classification provided in the reference.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1052",
+      "id": "b7a28dc0-293f-424a-8539-eecbd9bcaae1",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "(倍加洁: 11,078,142.33), (迈克生物: 21,428,623.41), (盾安环境: 40,638,256.54)",
+      "prediction": "1. 倍加洁集团股份有限公司：11,078,142.33 元\n2. 迈克生物 (Mike Biotechnology Co., Ltd.)：21,428,623.41 元\n3. 浙江盾安人工环境股份有限公司：40,638,256.54 元",
+      "raw": "Evaluation evidence: The assistant accurately extracted the 'received tax refunds' for all three companies mentioned in the gold answer. The numerical values match exactly, and the list is correctly sorted in ascending order as requested. The assistant included full company names and currency units, which adds clarity without introducing hallucinations or missing key information. The response fully satisfies the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_32",
+      "id": "a780dc25-81d8-4e0f-b344-5086b8055e04",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems \", \"# A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data \", \"# Deep Learning using Rectified Linear Units (ReLU) \", \"# BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE * \"]",
+      "prediction": "[\"Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems\", \"A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data\", \"Deep Learning using Rectified Linear Units (ReLU)\", \"BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE *\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, listing the same four paper titles in the correct order. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles, which are likely formatting artifacts rather than part of the actual titles. The assistant correctly followed the list format and the linear citation chain requirement. No hallucinations or missing key points were observed. The response is accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1066",
+      "id": "58f1fef5-fc79-4833-8b41-c4de8cc91b73",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "楚天科技",
+      "prediction": "楚天科技股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified \"楚天科技\" as the company with the highest accounts receivable, matching the gold answer. The addition of \"股份有限公司\" (Co., Ltd.) is a formal elaboration of the company name and does not constitute a hallucination or error. The answer is accurate, complete, and directly addresses the user's question without unnecessary information.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_917",
+      "id": "0991635f-602b-4453-a887-fa646c922446",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "880,750.00",
+      "prediction": "880,750.00 元",
+      "raw": "Evaluation evidence: The assistant's answer \"880,750.00 元\" is numerically identical to the gold answer \"880,750.00\". The addition of the currency unit \"元\" (Yuan) provides necessary context without altering the factual accuracy or introducing hallucinations. The response is concise, directly addresses the question, and fully meets the criteria for accuracy and completeness based on the provided gold standard.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_429",
+      "id": "0f33d54f-ac51-4d5c-9f4d-87b2fb3e6f23",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"刑事案件\": [\"《判决文书1》\", \"《判决文书3》\"], \"行政案件\": [\"《判决文书2》\", \"《判决文书6》\", \"《判决文书8》\"], \"民事案件\": [\"《判决文书4》\", \"《判决文书5》\", \"《判决文书7》\"]}",
+      "prediction": "{'刑事案件': ['《判决文书1》', '《判决文书3》'], '行政案件': ['《判决文书2》', '《判决文书6》', '《判决文书8》'], '民事案件': ['《判决文书4》', '《判决文书5》', '《判决文书7》']}",
+      "raw": "Evaluation evidence: The assistant's answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each case category. It correctly classifies all documents without any hallucinations or omissions. The format matches the requested JSON-like structure perfectly. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1054",
+      "id": "f03daa31-0176-4102-88a2-dc98f6fe28a3",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "科大讯飞",
+      "prediction": "iFlytek (科大讯飞)",
+      "raw": "Evaluation evidence: The assistant correctly identified \"科大讯飞\" (iFlytek) as the company with the highest fair value change gain, matching the gold answer exactly. The inclusion of the English name \"iFlytek\" does not affect accuracy or completeness. There are no hallucinations, and the answer directly addresses the user's question based on the provided context. The response is semantically consistent and fully accurate.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_430",
+      "id": "6bc1ff39-760e-451d-a5a7-3c7f8671f1a4",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"行政案件\": [\"《判决文书2》\"], \"执行案件\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书4》\"], \"刑事案件\": [\"《判决文书5》\", \"《判决文书6》\"]}",
+      "prediction": "{'行政案件': ['《判决文书2》'], '执行案件': ['《判决文书1》', '《判决文书3》', '《判决文书4》'], '刑事案件': ['《判决文书5》', '《判决文书6》']}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer. It correctly classifies all six judgment documents into the specified categories (Administrative, Execution, Criminal) with the exact same titles and grouping. The output format matches the requested dictionary structure perfectly. There are no hallucinations, missing items, or errors in classification. The response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_18",
+      "id": "ad6d0a53-1f8a-46b5-9738-a34d0a3cafaf",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Churn analysis using deep convolutional neural networks and autoencoders \", \"# Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis* \"]",
+      "prediction": "[\"Churn analysis using deep convolutional neural networks and autoencoders\", \"Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the two papers in the citation chain. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles, which are likely formatting artifacts rather than part of the actual titles. The order is correct, the list format is valid, and there are no hallucinations or missing key points. The response fully satisfies the task requirements.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1071",
+      "id": "b0bc3be6-62f9-447f-8bdc-206478fb4a4a",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "天华新能",
+      "prediction": "苏州天华新能源科技股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified the company with the highest non-current assets. The gold answer \"天华新能\" is the common short name for \"苏州天华新能源科技股份有限公司\" provided by the assistant. Both refer to the same entity, ensuring semantic consistency and accuracy without hallucination. The answer is complete as it directly addresses the question.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_442",
+      "id": "49f46b79-898c-45de-a19d-f25d17c216b1",
+      "type": "legal",
+      "level": 3,
+      "score": 60.0,
+      "gold": "{\"适用特殊程序案件案由\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书6》\", \"《判决文书12》\", \"《判决文书20》\"], \"侵权责任纠纷\": [\"《判决文书2》\", \"《判决文书11》\", \"《判决文书14》\", \"《判决文书16》\", \"《判决文书18》\"], \"民间借贷纠纷\": [\"《判决文书4》\"], \"行政行为-行政监督\": [\"《判决文书7》\", \"《判决文书17》\"], \"渎职罪\": [\"《判决文书9》\", \"《判决文书19》\"], \"行政主体-房屋拆迁管理（拆迁）\": [\"《判决文书5》\", \"《判决文书8》\", \"《判决文书10》\", \"《判决文书13》\", \"《判决文书15》\"]}",
+      "prediction": "{'适用特殊程序案件案由': ['《判决文书1》', '《判决文书6》', '《判决文书12》'], '侵权责任纠纷': ['《判决文书2》', '《判决文书11》', '《判决文书14》', '《判决文书18》'], '民间借贷纠纷': ['《判决文书4》', '《判决文书20》'], '行政行为-行政监督': ['《判决文书7》', '《判决文书17》'], '渎职罪': ['《判决文书9》', '《判决文书19》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书5》', '《判决文书8》', '《判决文书10》', '《判决文书13》', '《判决文书15》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant accuracy errors compared to the gold answer. Specifically, it missed \"《判决文书3》\" and \"《判决文书20》\" in the \"适用特殊程序案件案由\" category, and incorrectly included \"《判决文书20》\" in \"民间借贷纠纷\". Additionally, it missed \"《判决文书16》\" in the \"侵权责任纠纷\" category. These omissions and misclassifications violate the accuracy and completeness criteria.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "financial_level2_1060",
+      "id": "9df724a1-a65c-4617-9601-1abe28bd9c22",
+      "type": "financial",
+      "level": 2,
+      "score": 60.0,
+      "gold": "拓斯达: 3,176,429.81, 蔚蓝锂芯: 7,148,939.55, 汤臣倍健: 11,789,849.47",
+      "prediction": "1. 广东拓斯达科技股份有限公司：3,176,429.81 元\n2. DOC1 公司：7,148,939.55 元\n3. 汤臣倍健：11,789,849.47 元",
+      "raw": "Evaluation evidence: The assistant correctly identified the numerical values and the ascending order for all three companies as per the gold answer. However, it failed to correctly identify the second company, listing it as \"DOC1 公司\" instead of the correct name \"蔚蓝锂芯\". This is a significant hallucination or failure to extract the entity name from the source text, violating the accuracy criterion regarding semantic consistency. While the numbers are correct, the missing company name makes the answer incomplete and inaccurate.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "financial_level2_1070",
+      "id": "ee8aa4ad-0c73-4436-9324-2779ac0eb4be",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "雷曼光电",
+      "prediction": "Shenzhen Lemans Optical Technology Co., Ltd.",
+      "raw": "Evaluation evidence: The assistant correctly identified the company corresponding to the gold answer \"雷曼光电\" by providing its full English name, \"Shenzhen Lemans Optical Technology Co., Ltd.\". The answer is semantically consistent, accurate, and free of hallucinations. Although the language differs (English vs. Chinese), the entity reference is exact and fully satisfies the user's query regarding the specific company.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_28",
+      "id": "f359acf5-39a1-4490-ba4a-95d38de35fa7",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING \"], \"Citation\": [\"# Extending Llama-3's Context Ten-Fold Overnight \"]}",
+      "prediction": "{\"Reference\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\"], \"Citation\": [\"Extending Llama-3's Context Ten-Fold Overnight\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the omission of the leading \"#\" symbol in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing key points are present. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_27",
+      "id": "3e4ee654-dfd8-4ffd-a825-79e0997961c9",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# Purple Llama CYBERSECEvAL: A Secure Coding Benchmark for Language Models \"], \"Citation\": [\"# Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models \"]}",
+      "prediction": "{\"Reference\": [\"Purple Llama CYBERSECEvAL: A Secure Coding Benchmark for Language Models\"], \"Citation\": [\"Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the omission of the leading \"#\" symbol in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and all key points are present without hallucinations. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_474",
+      "id": "8cc235c3-4f58-49d5-bc38-790f804a37a9",
+      "type": "legal",
+      "level": 3,
+      "score": 80.0,
+      "gold": "{\"执行案由-刑事\": [\"《判决文书3》\"], \"执行案由-行政非诉执行\": [\"《判决文书4》\", \"《判决文书6》\"], \"海事海商纠纷\": [\"《判决文书2》\", \"《判决文书9》\"], \"知识产权与竞争\": [\"《判决文书5》\", \"《判决文书7》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书1》\", \"《判决文书8》\"]}",
+      "prediction": "{'执行案由-刑事': ['《判决文书3》'], '执行案由-行政非诉执行': ['《判决文书4》', '《判决文书6》'], '海事海商纠纷': ['《判决文书9》'], '知识产权与竞争': ['《判决文书5》', '《判决文书7》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书1》', '《判决文书8》']}",
+      "raw": "Evaluation evidence: The assistant's answer is incomplete compared to the gold answer. Specifically, under the category '海事海商纠纷', the assistant missed '《判决文书2》', which is present in the gold answer. All other categories and items match correctly. Due to this missing item, the answer fails the completeness criterion.\nRating: [[80]]"
+    },
+    {
+      "sample_id": "paper_level3_0",
+      "id": "13a4a371-6339-4c9d-82cf-fc9ab2bb017d",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# TinyLlama: An Open-Source Small Language Model \"], \"Citation\": [\"# Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training \"]}",
+      "prediction": "{\"Reference\": [\"TinyLlama: An Open-Source Small Language Model\"], \"Citation\": [\"Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the omission of the leading \"#\" symbol in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing key points are present. The content fully satisfies the requirements.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1073",
+      "id": "f056fcf9-2ae7-4a8a-aafc-c0473a58fcbc",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "2",
+      "prediction": "2",
+      "raw": "Evaluation evidence: The assistant's answer \"2\" is identical to the gold answer. It accurately addresses the user's question regarding the count of companies with total current assets exceeding 6,000,000,000. There are no hallucinations, and the response is complete as it provides the specific numerical value requested without unnecessary elaboration. The answer fully meets the criteria for accuracy and completeness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_920",
+      "id": "0efa49bf-4fa1-4d42-9e0d-685d2d5fd7d9",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "15,491.66",
+      "prediction": "15,491.66元",
+      "raw": "Evaluation evidence: The assistant's answer \"15,491.66元\" matches the numerical value in the gold answer \"15,491.66\" exactly. The addition of the currency unit \"元\" (Yuan) is contextually appropriate for a financial figure and does not constitute a hallucination or error. The response is accurate, complete, and directly addresses the user's question without unnecessary elaboration.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1072",
+      "id": "73784af5-c7f2-41de-8061-00fb2859ef29",
+      "type": "financial",
+      "level": 2,
+      "score": 0.0,
+      "gold": "三湘印象",
+      "prediction": "DOC1 公司",
+      "raw": "Evaluation evidence: The assistant's answer \"DOC1 公司\" is factually incorrect compared to the gold answer \"三湘印象\". The assistant failed to identify the correct company with the lowest net profit attributable to shareholders, likely hallucinating a generic placeholder instead of extracting the specific entity name from the provided context. This represents a complete failure in accuracy and completeness.\nRating: [[0]]"
+    },
+    {
+      "sample_id": "legal_level3_477",
+      "id": "36f29dc1-2ac2-4121-ba49-8cd9d96b7145",
+      "type": "legal",
+      "level": 3,
+      "score": 60.0,
+      "gold": "{\"行政主体-行政检查（监察）\": [\"《判决文书4》\", \"《判决文书8》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书7》\"], \"行政行为-行政监督\": [\"《判决文书6》\"], \"非刑事赔偿-错误执行赔偿\": [\"《判决文书2》\", \"《判决文书3》\"], \"贪污受贿罪\": [\"《判决文书1》\", \"《判决文书5》\"]}",
+      "prediction": "{'行政主体-行政检查（监察）': [], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书7》'], '行政行为-行政监督': ['《判决文书4》', '《判决文书6》', '《判决文书8》'], '非刑事赔偿-错误执行赔偿': ['《判决文书2》', '《判决文书3》'], '贪污受贿罪': ['《判决文书1》', '《判决文书5》']}",
+      "raw": "Evaluation evidence: The assistant failed to correctly classify several documents. Specifically, it missed \"判决文书4\" and \"判决文书8\" for \"行政主体-行政检查（监察）\" (which should be in this category according to the gold answer) and incorrectly placed them under \"行政行为-行政监督\". The gold answer lists \"判决文书6\" under \"行政行为-行政监督\", while the assistant added \"4\" and \"8\" to this category, creating a mismatch. The other categories were mostly correct, but the misclassification of three documents significantly impacts accuracy.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "financial_level1_912",
+      "id": "9b78667b-b80b-475b-a574-6748d8668a77",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "7,941,067.96",
+      "prediction": "7,941,067.96 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (7,941,067.96). The addition of the currency unit \"元\" (Yuan) is contextually appropriate for a financial question regarding a Chinese company and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific value requested.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_465",
+      "id": "7241cb29-a96d-4768-a3ec-716b0fdf91cc",
+      "type": "legal",
+      "level": 3,
+      "score": 40.0,
+      "gold": "{\"知识产权与竞争\": [\"《判决文书2》\"], \"行政主体-民政行政管理（民政）\": [\"《判决文书1》\", \"《判决文书4》\", \"《判决文书5》\"], \"行政行为-行政受理\": [\"《判决文书6》\"], \"行政行为-其他行政行为\": [\"《判决文书8》\", \"《判决文书9》\"], \"渎职罪\": [\"《判决文书7》\"], \"产品责任纠纷\": [\"《判决文书3》\"]}",
+      "prediction": "{'知识产权与竞争': ['《判决文书2》'], '行政主体-民政行政管理（民政）': [], '行政行为-行政受理': ['《判决文书6》'], '行政行为-其他行政行为': ['《判决文书1》', '《判决文书4》', '《判决文书5》', '《判决文书8》', '《判决文书9》'], '渎职罪': ['《判决文书7》'], '产品责任纠纷': ['《判决文书3》']}",
+      "raw": "Evaluation evidence: The assistant failed to correctly classify three documents. According to the gold answer, \"判决文书1\", \"判决文书4\", and \"判决文书5\" belong to \"行政主体-民政行政管理（民政）\", but the assistant incorrectly placed them under \"行政行为-其他行政行为\". Consequently, the \"行政主体-民政行政管理（民政）\" category was left empty in the assistant's response, while \"行政行为-其他行政行为\" contained incorrect entries. This represents a significant accuracy error and hallucination regarding the classification logic.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "legal_level3_470",
+      "id": "15a1c00f-0cc8-47e8-81d7-7003166d9505",
+      "type": "legal",
+      "level": 3,
+      "score": 60.0,
+      "gold": "{\"行政行为-行政强制\": [\"《判决文书1》\", \"《判决文书4》\"], \"不动产登记纠纷\": [\"《判决文书5》\"], \"行政行为-行政给付\": [\"《判决文书3》\"], \"产品责任纠纷\": [\"《判决文书8》\"], \"执行案由-行政\": [\"《判决文书2》\", \"《判决文书6》\", \"《判决文书7》\"]}",
+      "prediction": "{'行政行为-行政强制': ['《判决文书4》'], '不动产登记纠纷': ['《判决文书5》'], '行政行为-行政给付': ['《判决文书1》', '《判决文书3》'], '产品责任纠纷': ['《判决文书8》'], '执行案由-行政': ['《判决文书2》', '《判决文书6》', '《判决文书7》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant accuracy errors compared to the gold answer. Specifically, it incorrectly classified \"《判决文书1》\" as '行政行为-行政给付' instead of '行政行为-行政强制', and it missed \"《判决文书4》\" in the '行政行为-行政强制' category. While other categories were mostly correct, these misclassifications violate the strict accuracy requirement for legal document categorization.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "paper_level3_10",
+      "id": "49680a79-a974-49b0-b7e3-85ff515bc4f2",
+      "type": "paper",
+      "level": 3,
+      "score": 0.0,
+      "gold": "{\"Reference\": [\"# Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding \"], \"Citation\": [\"# Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning \"]}",
+      "prediction": "{\"Reference\": [], \"Citation\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding\", \"Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is factually incorrect regarding the citation relationships. The gold answer indicates the paper references \"Don't Fine-Tune, Decode...\" and is cited by \"Smurfs...\". The assistant incorrectly lists both papers as citations (papers citing the target) and misses the reference entirely. This represents a complete failure in accuracy and hallucination of relationships, contradicting the provided gold standard.\nRating: [[0]]"
+    },
+    {
+      "sample_id": "financial_level2_1074",
+      "id": "deef0ddc-a85a-4ef4-871c-ec851a4276f9",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "东阿阿胶",
+      "prediction": "东阿阿胶股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified \"东阿阿胶\" as the company with the highest comprehensive income attributable to owners of the parent company. The predicted answer \"东阿阿胶股份有限公司\" is the full legal name of the entity referred to as \"东阿阿胶\" in the gold answer. This is semantically identical and factually accurate. There are no hallucinations, and the answer fully addresses the user's question with the necessary key point.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_9",
+      "id": "a8fa7aa1-2198-419b-a0de-6ba4d1c1f160",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation \", \"# LATENT IMAGE ANIMATOR: <br> LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION \", \"# Dance Any Beat: Blending Beats with Visuals in Dance Video Generation \"]",
+      "prediction": "[\"InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation\", \"LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION\", \"Dance Any Beat: Blending Beats with Visuals in Dance Video Generation\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of markdown formatting (hash symbols and `<br>` tags) from the titles. Since the core content, order, and semantic meaning are identical to the gold answer, the response is accurate, complete, and free of hallucinations. The formatting simplification improves readability without losing information.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_2",
+      "id": "835a4005-8c32-4083-b52d-4e014d1d35f5",
+      "type": "paper",
+      "level": 4,
+      "score": 40.0,
+      "gold": "[\"# CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR \", \"# HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units \", \"# SUPERB: Speech processing Universal PERformance Benchmark \"]",
+      "prediction": "[\"CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\"]",
+      "raw": "Evaluation evidence: The assistant failed to identify the longest citation chain. The gold answer contains three papers forming a complete chain, whereas the assistant only provided two. This violates the \"Completeness\" requirement as it missed the final paper in the sequence. Additionally, the assistant omitted the \"#\" prefix present in the gold answer titles, causing a minor formatting discrepancy. The response is incomplete and does not fully satisfy the task instructions.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "financial_level2_1065",
+      "id": "1939ee6a-6edd-45c7-b361-ca733096ea15",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "楚天科技",
+      "prediction": "楚天科技股份有限公司",
+      "raw": "Evaluation evidence: The assistant's answer \"楚天科技股份有限公司\" is semantically identical to the gold answer \"楚天科技\", as the former is the full legal name of the latter. The response accurately identifies the company with the highest cash paid to employees without hallucinations or missing key information. It fully satisfies the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1062",
+      "id": "d20f30d2-7f6b-481a-bd0f-0c050bacde5d",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "汤臣倍健: 67,802,146.14元, 拓斯达: 102,449,276.56元, 蔚蓝锂芯: 293,936,136.56元",
+      "prediction": "1. 汤臣倍健股份有限公司：67,802,146.14\n2. 广东拓斯达科技股份有限公司：102,449,276.56\n3. 江苏蔚蓝锂芯股份有限公司：293,936,136.56",
+      "raw": "Evaluation evidence: The assistant correctly identified the three companies and their corresponding 'minority interest' values. The numerical values match the gold answer exactly. The companies are listed in ascending order of their values (67M < 102M < 293M), satisfying the sorting requirement. The inclusion of full company names and the omission of the currency unit \"元\" in the final number do not affect the semantic accuracy or completeness relative to the core data requested. No hallucinations are present.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_17",
+      "id": "17539923-dd06-4712-becd-68fb8d68614d",
+      "type": "paper",
+      "level": 4,
+      "score": 0.0,
+      "gold": "[\"# Influence of Neighborhood on the Preference of an Item in eCommerce Search \", \"# Context-Aware Learning to Rank with Self-Attention \"]",
+      "prediction": "[]",
+      "raw": "Evaluation evidence: The assistant failed to identify the citation chain, returning an empty list instead of the required two papers. The gold answer specifies a linear chain of two titles, which the assistant completely missed. This represents a total failure in accuracy and completeness, as no key points were addressed and the output is semantically inconsistent with the correct solution.\nRating: [[0]]"
+    },
+    {
+      "sample_id": "legal_level3_478",
+      "id": "c80eaa9d-8c7e-4260-beab-551eb8bd5915",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"继承纠纷\": [\"《判决文书7》\", \"《判决文书9》\"], \"执行案由-民事\": [\"《判决文书1》\", \"《判决文书6》\", \"《判决文书8》\"], \"民间借贷纠纷\": [\"《判决文书10》\"], \"行政行为-行政处罚\": [\"《判决文书2》\", \"《判决文书4》\"], \"行政行为-其他行政行为\": [\"《判决文书3》\", \"《判决文书5》\"]}",
+      "prediction": "{'继承纠纷': ['《判决文书7》', '《判决文书9》'], '执行案由-民事': ['《判决文书1》', '《判决文书6》', '《判决文书8》'], '民间借贷纠纷': ['《判决文书10》'], '行政行为-行政处罚': ['《判决文书2》', '《判决文书4》'], '行政行为-其他行政行为': ['《判决文书3》', '《判决文书5》']}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each legal cause category. All keys and values match perfectly, with no hallucinations or missing information. The formatting also adheres to the requested dictionary structure. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_34",
+      "id": "f7116f92-a07c-4278-9333-b63ed5965907",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems \", \"# A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data \", \"# Deep Learning using Rectified Linear Units (ReLU) \", \"# BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE * \"]",
+      "prediction": "[\"Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems\", \"A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data\", \"Deep Learning using Rectified Linear Units (ReLU)\", \"BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE *\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, listing the same four paper titles in the correct order. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles, which are likely formatting artifacts rather than part of the actual titles. The assistant correctly followed the list format and the linear citation chain requirement. No hallucinations or missing key points were observed. The response is accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_19",
+      "id": "b5b963fe-30ab-435f-9574-dcdfd96f3707",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Minimod: A Finite Difference solver for Seismic Modeling \", \"# Massively scalable stencil algorithm \"]",
+      "prediction": "[\"Minimod: A Finite Difference solver for Seismic Modeling\", \"Massively scalable stencil algorithm\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the two papers and their sequential citation order, matching the gold answer's content and logic. The only difference is the removal of the leading hash symbols (#) in the titles, which are likely formatting artifacts in the gold answer rather than part of the actual titles. The assistant's output is semantically consistent, accurate, and complete regarding the citation chain requirements. No hallucinations or missing key points are present.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_35",
+      "id": "c8d80aee-3b85-434f-a348-2b40bb7d12dd",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Context-Aware Learning to Rank with Self-Attention \", \"# On the Impact of Outlier Bias on User Clicks \", \"# Treatment Effect Estimation for User Interest Exploration on Recommender Systems \"]",
+      "prediction": "[\"Context-Aware Learning to Rank with Self-Attention\", \"On the Impact of Outlier Bias on User Clicks\", \"Treatment Effect Estimation for User Interest Exploration on Recommender Systems\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles. Since the core content (the paper titles) and the sequence are semantically identical and accurate, the answer is fully correct. No hallucinations or missing key points are present.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1056",
+      "id": "3ce7efe3-6cfb-41b2-a856-bb77927d7c9b",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "英力特: 5.04%, 科大讯飞: 26.27%, 百亚股份: 46.40%",
+      "prediction": "1. 宁夏银科化学股份有限公司：5.04%\n2. 科大讯飞：26.27%\n3. Chongqing Baiya Hygiene Products Co., Ltd.：46.40%",
+      "raw": "Evaluation evidence: The assistant correctly identified the three companies and their corresponding revenue growth percentages, matching the gold answer's numerical values and ascending order. Although the assistant used the full legal name for the first company and the English name for the third instead of the Chinese short names in the gold answer, the entities are semantically identical. No hallucinations or missing data points were found. The response fully satisfies the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_461",
+      "id": "aaa21385-8b1b-456b-af09-2151c41e5e14",
+      "type": "legal",
+      "level": 3,
+      "score": 70.0,
+      "gold": "{\"海事海商纠纷\": [\"《判决文书7》\"], \"执行案由-对下级法院执行异议裁定的复议\": [\"《判决文书4》\"], \"行政行为-行政复议\": [\"《判决文书6》\", \"《判决文书8》\", \"《判决文书9》\"], \"渎职罪\": [\"《判决文书1》\", \"《判决文书2》\"], \"产品责任纠纷\": [\"《判决文书3》\"], \"行政行为-行政裁决\": [\"《判决文书5》\"]}",
+      "prediction": "{'海事海商纠纷': ['《判决文书7》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书4》'], '行政行为-行政复议': ['《判决文书5》', '《判决文书6》', '《判决文书8》', '《判决文书9》'], '渎职罪': ['《判决文书1》', '《判决文书2》'], '产品责任纠纷': ['《判决文书3》'], '行政行为-行政裁决': []}",
+      "raw": "Evaluation evidence: The assistant failed to correctly classify \"《判决文书5》\". The gold answer assigns it to \"行政行为-行政裁决\", but the assistant incorrectly placed it in \"行政行为-行政复议\" and left \"行政行为-行政裁决\" empty. This is a factual error (hallucination/misclassification) regarding the document's category, violating the accuracy criterion. All other classifications were correct, but this specific error makes the answer incomplete and inaccurate relative to the gold standard.\nRating: [[70]]"
+    },
+    {
+      "sample_id": "paper_level4_21",
+      "id": "31ee8539-2e9e-40e2-adc3-082c872698f7",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Churn analysis using deep convolutional neural networks and autoencoders \", \"# Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis* \", \"# MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING \", \"# An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention \"]",
+      "prediction": "[\"Churn analysis using deep convolutional neural networks and autoencoders\", \"Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*\", \"MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING\", \"An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, listing the correct sequence of four paper titles. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles, which are likely formatting artifacts rather than part of the actual titles. The order, content, and completeness of the citation chain are accurate, with no hallucinations or missing elements. The response strictly adheres to the requested list format.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_911",
+      "id": "d9a8d9d2-5f02-4253-b2dc-a9411debeb34",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "435,022.00",
+      "prediction": "435,022.00 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (435,022.00). The addition of the unit \"元\" (Yuan) is contextually appropriate for a financial question and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific value requested. The response fully meets the criteria for accuracy and completeness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_482",
+      "id": "2525fc69-7748-4e5b-a561-45fa26d55989",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"执行案由-对下级法院执行异议裁定的复议\": [\"《判决文书1》\"], \"产品责任纠纷\": [\"《判决文书8》\"], \"行政行为-行政受理\": [\"《判决文书3》\", \"《判决文书7》\"], \"知识产权与竞争\": [\"《判决文书6》\"], \"不动产登记纠纷\": [\"《判决文书2》\", \"《判决文书4》\", \"《判决文书5》\"]}",
+      "prediction": "{'执行案由-对下级法院执行异议裁定的复议': ['《判决文书1》'], '产品责任纠纷': ['《判决文书8》'], '行政行为-行政受理': ['《判决文书3》', '《判决文书7》'], '知识产权与竞争': ['《判决文书6》'], '不动产登记纠纷': ['《判决文书2》', '《判决文书4》', '《判决文书5》']}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each category. It correctly classifies all documents without any hallucinations or omissions. The format matches the requested JSON-like structure perfectly. Since the output is semantically and structurally consistent with the gold standard, it receives full marks.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_15",
+      "id": "949f3450-9b30-4556-be5f-ca8afe9e072f",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [], \"Citation\": [\"# LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language \", \"# InstructionCP: A fast approach to transfer Large Language Models into target language \"]}",
+      "prediction": "{\"Reference\": [], \"Citation\": [\"LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language\", \"InstructionCP: A fast approach to transfer Large Language Models into target language\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the empty reference list and the two specific citation titles. The only difference is the removal of the leading \"#\" symbol in the citation titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The assistant's output is cleaner and strictly adheres to the requested JSON format without hallucinations or missing information.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_464",
+      "id": "ef000fb2-fd9c-4baf-827c-cc7d1612d0e1",
+      "type": "legal",
+      "level": 3,
+      "score": 90.0,
+      "gold": "{\"行政主体-房屋拆迁管理（拆迁）\": [\"《判决文书3》\", \"《判决文书5》\", \"《判决文书7》\"], \"刑事赔偿\": [\"《判决文书4》\"], \"不动产登记纠纷\": [\"《判决文书6》\"], \"知识产权与竞争\": [\"《判决文书1》\", \"《判决文书2》\", \"《判决文书9》\"], \"产品责任纠纷\": [\"《判决文书8》\"], \"行政行为-行政给付\": [\"《判决文书10》\"]}",
+      "prediction": "{'行政主体-房屋拆迁管理（拆迁）': ['《判决文书3》', '《判决文书5》', '《判决文书7》'], '刑事赔偿': ['《判决文书4》'], '不动产登记纠纷': ['《判决文书6》'], '知识产权与竞争': ['《判决文书2》', '《判决文书9》'], '产品责任纠纷': ['《判决文书8》'], '行政行为-行政给付': ['《判决文书10》']}",
+      "raw": "Evaluation evidence: The assistant's answer is almost identical to the gold answer but fails to include \"《判决文书1》\" in the \"知识产权与竞争\" category. The gold answer lists three documents for this category, while the assistant only listed two. This omission constitutes a completeness error and a deviation from the ground truth, as the assistant missed a required item. Therefore, the answer is not fully accurate or complete.\nRating: [[90]]"
+    },
+    {
+      "sample_id": "financial_level1_903",
+      "id": "ccc165c3-b068-4b97-9a50-17d9c5ae273f",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "144,480.00",
+      "prediction": "144,480.00 元",
+      "raw": "Evaluation evidence: The assistant's answer \"144,480.00 元\" is numerically identical to the gold answer \"144,480.00\". The addition of the currency unit \"元\" (Yuan) provides necessary context without altering the factual accuracy or introducing hallucinations. The response is concise, directly addresses the question, and fully satisfies the criteria for accuracy and completeness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_410",
+      "id": "9201217d-55ff-4990-8f75-c655d73bd016",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"刑事案件\": [\"《判决文书1》\"], \"执行案件\": [\"《判决文书3》\", \"《判决文书5》\", \"《判决文书6》\"], \"行政案件\": [\"《判决文书2》\", \"《判决文书4》\"]}",
+      "prediction": "{'刑事案件': ['《判决文书1》'], '执行案件': ['《判决文书3》', '《判决文书5》', '《判决文书6》'], '行政案件': ['《判决文书2》', '《判决文书4》']}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer. It correctly classifies all six judgment documents into the three specified categories (Criminal, Execution, Administrative) with the exact same titles and grouping. The output format matches the requested JSON-like structure perfectly. There are no hallucinations, missing items, or errors in classification. The response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level4_527",
+      "id": "f5b7f235-3a05-4763-b52b-0a9e53c2ef6a",
+      "type": "legal",
+      "level": 4,
+      "score": 100.0,
+      "gold": "{\"《判决文书1》\": \"判决结果6\", \"《判决文书2》\": \"判决结果2\", \"《判决文书3》\": \"判决结果3\", \"《判决文书4》\": \"判决结果9\", \"《判决文书5》\": \"判决结果5\", \"《判决文书6》\": \"判决结果1\", \"《判决文书7》\": \"判决结果7\", \"《判决文书8》\": \"判决结果8\"}",
+      "prediction": "{\"《判决文书1》\": \"判决结果6\", \"《判决文书2》\": \"判决结果2\", \"《判决文书3》\": \"判决结果3\", \"《判决文书4》\": \"判决结果9\", \"《判决文书5》\": \"判决结果5\", \"《判决文书6》\": \"判决结果1\", \"《判决文书7》\": \"判决结果7\", \"《判决文书8》\": \"判决结果8\"}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the provided gold answer in terms of content, structure, and formatting. It correctly maps all eight judgment documents to their corresponding result numbers as specified in the reference. There are no hallucinations, missing entries, or formatting errors. The response strictly adheres to the requested JSON format and the instruction to provide only the titles and result indices.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_457",
+      "id": "9c854c96-14e3-43c0-b0cd-806edd7252ec",
+      "type": "legal",
+      "level": 3,
+      "score": 20.0,
+      "gold": "{\"执行案由-先予执行\": [\"《判决文书4》\"], \"适用特殊程序案件案由\": [\"《判决文书5》\", \"《判决文书9》\"], \"行政行为-行政征收\": [\"《判决文书1》\", \"《判决文书3》\"], \"产品责任纠纷\": [\"《判决文书6》\"], \"行政行为-行政处罚\": [\"《判决文书8》\"], \"人格权纠纷\": [\"《判决文书2》\", \"《判决文书7》\"]}",
+      "prediction": "{'执行案由-先予执行': ['《判决文书5》'], '适用特殊程序案件案由': [], '行政行为-行政征收': ['《判决文书1》', '《判决文书3》'], '产品责任纠纷': ['《判决文书6》'], '行政行为-行政处罚': ['《判决文书8》'], '人格权纠纷': []}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant inaccuracies and omissions compared to the gold answer. It incorrectly classified \"判决文书5\" under \"执行案由-先予执行\" instead of \"适用特殊程序案件案由\". It completely missed \"判决文书2\", \"判决文书4\", \"判决文书7\", and \"判决文书9\", leaving several categories empty or incomplete. These errors represent both hallucinations (wrong classification) and a lack of completeness, failing to meet the criteria for a correct response.\nRating: [[20]]"
+    },
+    {
+      "sample_id": "paper_level4_8",
+      "id": "150529cd-8767-477e-aa2b-28bae4970fdd",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Massively scalable stencil algorithm \", \"# Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines \", \"# Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System \"]",
+      "prediction": "[\"Massively scalable stencil algorithm\", \"Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines\", \"Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same sequential order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) present in the gold answer's titles. Since the hash symbols appear to be formatting artifacts rather than part of the actual paper titles, the assistant's output is semantically identical and more standard. The list format is correct, and no hallucinations or missing elements are present.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level4_526",
+      "id": "375c0bba-a360-4414-9ab8-d2e39f9dddb1",
+      "type": "legal",
+      "level": 4,
+      "score": 100.0,
+      "gold": "{\"《判决文书1》\": \"判决结果10\", \"《判决文书2》\": \"判决结果1\", \"《判决文书3》\": \"判决结果8\", \"《判决文书4》\": \"判决结果4\", \"《判决文书5》\": \"判决结果5\", \"《判决文书6》\": \"判决结果3\", \"《判决文书7》\": \"判决结果7\", \"《判决文书8》\": \"判决结果9\"}",
+      "prediction": "{\"《判决文书1》\": \"判决结果10\", \"《判决文书2》\": \"判决结果1\", \"《判决文书3》\": \"判决结果8\", \"《判决文书4》\": \"判决结果4\", \"《判决文书5》\": \"判决结果5\", \"《判决文书6》\": \"判决结果3\", \"《判决文书7》\": \"判决结果7\", \"《判决文书8》\": \"判决结果9\"}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the provided gold answer in terms of content, structure, and mapping of judgment documents to result numbers. It correctly identifies all 8 mappings without any hallucinations or omissions. The JSON format is valid and strictly follows the user's instructions. Since the output matches the gold standard perfectly, it receives full marks.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_484",
+      "id": "698eae44-c64d-42b7-835e-3bcf57be8175",
+      "type": "legal",
+      "level": 3,
+      "score": 80.0,
+      "gold": "{\"贪污受贿罪\": [\"《判决文书2》\", \"《判决文书9》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书3》\", \"《判决文书7》\", \"《判决文书10》\"], \"执行案由-行政\": [\"《判决文书8》\"], \"所有权纠纷\": [\"《判决文书5》\"], \"行政行为-行政裁决\": [\"《判决文书1》\", \"《判决文书4》\", \"《判决文书6》\"]}",
+      "prediction": "{'贪污受贿罪': ['《判决文书2》', '《判决文书9》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书3》', '《判决文书7》', '《判决文书10》'], '执行案由-行政': ['《判决文书8》'], '所有权纠纷': [], '行政行为-行政裁决': ['《判决文书1》', '《判决文书4》', '《判决文书6》']}",
+      "raw": "Evaluation evidence: The assistant's answer is almost identical to the gold answer but fails to include \"《判决文书5》\" in the \"所有权纠纷\" category, leaving it as an empty list. This is a significant omission of a key data point required by the question, violating the completeness criterion. While the other categories are accurate, the missing entry makes the answer incomplete and factually incorrect regarding the classification of that specific document.\nRating: [[80]]"
+    },
+    {
+      "sample_id": "legal_level3_411",
+      "id": "c59a2cef-21d2-47a4-9f2a-75e68c4797a1",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"刑事案件\": [\"《判决文书1》\", \"《判决文书2》\"], \"民事案件\": [\"《判决文书4》\", \"《判决文书6》\", \"《判决文书8》\"], \"管辖案件\": [\"《判决文书3》\", \"《判决文书5》\", \"《判决文书7》\", \"《判决文书9》\"]}",
+      "prediction": "{'刑事案件': ['《判决文书1》', '《判决文书2》'], '民事案件': ['《判决文书4》', '《判决文书6》', '《判决文书8》'], '管辖案件': ['《判决文书3》', '《判决文书5》', '《判决文书7》', '《判决文书9》']}",
+      "raw": "Evaluation evidence: The assistant's answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each category. It correctly classifies all documents without any hallucinations or omissions. The format matches the requested JSON-like structure perfectly. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_910",
+      "id": "8e18ef29-cd7a-4227-9a6c-2daae9fda400",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "239,644,736.01",
+      "prediction": "239,644,736.01 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (239,644,736.01). The addition of the currency unit \"元\" (Yuan) is contextually appropriate for a financial question regarding a Chinese company and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific figure requested. The response strictly adheres to the provided information.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_12",
+      "id": "30a2535f-7e73-46ad-a402-ee80ac6e4f92",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Scaling Advantage in Approximate Optimization with Quantum Annealing \", \"# 4-clique Network Minor Embedding for Quantum Annealers \", \"# Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All \", \"# Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances \"]",
+      "prediction": "[\"Scaling Advantage in Approximate Optimization with Quantum Annealing\", \"4-clique Network Minor Embedding for Quantum Annealers\", \"Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All\", \"Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same four papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles in the gold answer. Since the titles are semantically identical and the list format is correct, the answer is accurate, complete, and free of hallucinations. The minor formatting difference does not affect the correctness of the citation chain.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_409",
+      "id": "3b3111ed-78b9-47dc-9700-b9152d777935",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"赔偿案件\": [\"《判决文书4》\", \"《判决文书7》\"], \"民事案件\": [\"《判决文书6》\"], \"执行案件\": [\"《判决文书1》\", \"《判决文书2》\", \"《判决文书3》\", \"《判决文书5》\"]}",
+      "prediction": "{'赔偿案件': ['《判决文书4》', '《判决文书7》'], '民事案件': ['《判决文书6》'], '执行案件': ['《判决文书1》', '《判决文书2》', '《判决文书3》', '《判决文书5》']}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each category. It correctly classifies all documents without any hallucinations or omissions. The format matches the requested JSON-like structure perfectly. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1067",
+      "id": "3e0ed776-9822-4a8a-9c19-051ab8300413",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "华峰超纤",
+      "prediction": "Shanghai Huafeng Superfiber Technology Co., Ltd.",
+      "raw": "Evaluation evidence: The assistant correctly identified the company with the highest revenue change. Although the gold answer is in Chinese (\"华峰超纤\") and the assistant responded in English (\"Shanghai Huafeng Superfiber Technology Co., Ltd.\"), they refer to the exact same entity. The answer is accurate, contains no hallucinations, and fully addresses the user's question by providing the correct company name.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1063",
+      "id": "dac7f220-fcd7-4c64-8cb4-335a98da852f",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "依米康: 243,430,007.72元, 洁美科技: 312,296,510.50元, 华夏航空: 1,850,982,243.53",
+      "prediction": "1. DOC2 公司：243,430,007.72 元\n2. Zhejiang Jemei Electronic Technology Co., Ltd.：312,296,510.50 元\n3. 华夏航空：1,850,982,243.53 元",
+      "raw": "Evaluation evidence: The assistant correctly identified the three companies and their corresponding '营业总成本' values, matching the gold answer numerically. The values are listed in the required ascending order. Although the assistant used \"DOC2 公司\" and the English name for \"Zhejiang Jemei\" instead of the Chinese names \"依米康\" and \"洁美科技\" found in the gold answer, the semantic content and data accuracy are fully preserved. No hallucinations or missing data points were found.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_414",
+      "id": "6ca980cb-5968-44b2-852f-25627c5afff7",
+      "type": "legal",
+      "level": 3,
+      "score": 80.0,
+      "gold": "{\"民事案件\": [\"《判决文书3》\", \"《判决文书8》\"], \"执行案件\": [\"《判决文书4》\", \"《判决文书13》\"], \"管辖案件\": [\"《判决文书1》\", \"《判决文书7》\", \"《判决文书9》\", \"《判决文书10》\", \"《判决文书11》\", \"《判决文书12》\"], \"刑事案件\": [\"《判决文书2》\", \"《判决文书5》\", \"《判决文书6》\"]}",
+      "prediction": "{'民事案件': ['《判决文书3》', '《判决文书8》', '《判决文书11》'], '执行案件': ['《判决文书4》', '《判决文书13》'], '管辖案件': ['《判决文书1》', '《判决文书7》', '《判决文书9》', '《判决文书10》', '《判决文书12》'], '刑事案件': ['《判决文书2》', '《判决文书5》', '《判决文书6》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains a classification error. It incorrectly placed \"《判决文书11》\" under \"民事案件\" (Civil Cases), whereas the gold answer correctly classifies it under \"管辖案件\" (Jurisdiction Cases). Consequently, the \"管辖案件\" list in the assistant's response is missing this document. This violates the accuracy and completeness criteria as the classification does not match the reference answer.\nRating: [[80]]"
+    },
+    {
+      "sample_id": "financial_level1_908",
+      "id": "0a2a5a6a-94fe-43e1-9c09-e5e0bc41d56b",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "6,889,697.28",
+      "prediction": "6,889,697.28 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (6,889,697.28). The addition of the currency unit \"元\" (Yuan) is contextually appropriate and does not alter the semantic meaning or accuracy of the data. The response is concise, accurate, and fully addresses the user's question without hallucinations or missing key information.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1069",
+      "id": "239498cf-498e-4489-bc95-08c8684ad540",
+      "type": "financial",
+      "level": 2,
+      "score": 60.0,
+      "gold": "华峰超纤: 0.0131, 恩捷股份: 0.16, 洋河股份: 4.0195",
+      "prediction": "1. 上海华峰超纤材料股份有限公司：0.0131 元/股\n2. DOC1 公司：0.16 元/股\n3. DOC2 公司：4.0195 元/股",
+      "raw": "Evaluation evidence: The assistant correctly identified the numerical values for diluted EPS (0.0131, 0.16, 4.0195) and maintained the correct increasing order. However, it failed to identify the specific company names for the second and third entries, using placeholders \"DOC1 公司\" and \"DOC2 公司\" instead of \"恩捷股份\" and \"洋河股份\" as required by the gold answer. This constitutes a failure in completeness and accuracy regarding entity identification, despite correct numerical extraction.\nRating: [[60]]"
+    },
+    {
+      "sample_id": "paper_level4_13",
+      "id": "68e88dcc-6dec-4bb4-b51b-1fe8d6cd856d",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Query2doc: Query Expansion with Large Language Models \", \"# Query Expansion by Prompting Large Language Models \", \"# LGDE: Local Graph-based Dictionary Expansion \"]",
+      "prediction": "[\"Query2doc: Query Expansion with Large Language Models\", \"Query Expansion by Prompting Large Language Models\", \"LGDE: Local Graph-based Dictionary Expansion\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles. Since the core content (the paper titles) and the sequence are semantically identical and accurate, the answer is fully correct. No hallucinations or missing key points are present.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level1_913",
+      "id": "e44ce525-18eb-4d3a-b904-384caf1a6270",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "2,914,389.00",
+      "prediction": "2,914,389.00元",
+      "raw": "Evaluation evidence: The assistant's answer \"2,914,389.00元\" is numerically identical to the gold answer \"2,914,389.00\". The addition of the currency unit \"元\" (Yuan) provides necessary context without altering the factual accuracy or introducing hallucinations. The response is concise, directly addresses the question, and fully meets the criteria for accuracy and completeness.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_447",
+      "id": "de1b3c88-6d88-4d7d-a5cf-e65d225562fa",
+      "type": "legal",
+      "level": 3,
+      "score": 40.0,
+      "gold": "{\"行政主体-房屋拆迁管理（拆迁）\": [\"《判决文书11》\", \"《判决文书14》\"], \"行政行为-行政强制\": [\"《判决文书8》\"], \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\": [\"《判决文书3》\", \"《判决文书5》\", \"《判决文书10》\", \"《判决文书15》\"], \"贪污受贿罪\": [\"《判决文书6》\"], \"行政行为-行政撤销\": [\"《判决文书13》\", \"《判决文书16》\"], \"行政行为-行政处罚\": [\"《判决文书4》\", \"《判决文书7》\"], \"行政行为-行政征收\": [\"《判决文书1》\", \"《判决文书2》\", \"《判决文书9》\", \"《判决文书12》\"]}",
+      "prediction": "{'行政主体-房屋拆迁管理（拆迁）': ['《判决文书9》', '《判决文书11》'], '行政行为-行政强制': ['《判决文书14》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书3》', '《判决文书5》', '《判决文书10》', '《判决文书15》'], '贪污受贿罪': ['《判决文书6》'], '行政行为-行政撤销': ['《判决文书16》'], '行政行为-行政处罚': ['《判决文书4》', '《判决文书7》'], '行政行为-行政征收': ['《判决文书1》', '《判决文书2》', '《判决文书12》', '《判决文书13》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains multiple classification errors compared to the gold answer. Specifically, it misclassified \"判决文书9\" (should be 行政征收, marked as 房屋拆迁), \"判决文书13\" (should be 行政撤销, marked as 行政征收), \"判决文书14\" (should be 房屋拆迁, marked as 行政强制), and missed \"判决文书13\" in the 行政撤销 category. These inaccuracies violate the accuracy and completeness criteria.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "paper_level3_7",
+      "id": "b7405d8e-13f0-4750-a25d-df3a67ffd39a",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# Benchmarking Large Language Models in Retrieval-Augmented Generation \"], \"Citation\": [\"# When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively \"]}",
+      "prediction": "{\"Reference\": [\"Benchmarking Large Language Models in Retrieval-Augmented Generation\"], \"Citation\": [\"When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the removal of the leading '#' character in the titles, which is likely a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing information are present. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_24",
+      "id": "71d0fb39-d315-4e33-beec-c53271663f7f",
+      "type": "paper",
+      "level": 3,
+      "score": 40.0,
+      "gold": "{\"Reference\": [\"# ONLINE SPECULATIVE DECODING \"], \"Citation\": [\"# LoRA-Switch: Boosting the Efficiency of Dynamic LLM Adapters via System-Algorithm Co-design \"]}",
+      "prediction": "{\"Reference\": [\"ONLINE SPECULATIVE DECODING\"], \"Citation\": [\"LoRA-Switch: Boosting the Efficiency of Dynamic LLM Adapters via System-Algorithm Co-design\", \"ONLINE SPECULATIVE DECODING\"]}",
+      "raw": "Evaluation evidence: The assistant failed to accurately match the gold answer. First, it included \"ONLINE SPECULATIVE DECODING\" in the \"Citation\" list, which is incorrect according to the gold answer (it should only be in \"Reference\"). This is a hallucination of a citation relationship. Second, the assistant omitted the \"#\" prefix from the paper titles, which are present in the gold answer, violating the requirement for exact string matching. These errors in both content and formatting significantly reduce accuracy.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "financial_level2_1068",
+      "id": "0e92a095-a65c-4c10-8985-3a30c43610d5",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "恩捷股份",
+      "prediction": "云南恩捷新材料股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified the company with the highest non-current assets. The gold answer \"恩捷股份\" is the common short name for \"云南恩捷新材料股份有限公司\" provided by the assistant. Both refer to the same entity, ensuring semantic consistency and accuracy without hallucination. The answer is complete as it directly addresses the question.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_463",
+      "id": "55fa764d-367e-4be9-aa93-7fb9233cd354",
+      "type": "legal",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"渎职罪\": [\"《判决文书3》\", \"《判决文书7》\"], \"执行案由-行政非诉执行\": [\"《判决文书4》\", \"《判决文书6》\", \"《判决文书9》\"], \"刑事赔偿\": [\"《判决文书8》\", \"《判决文书10》\"], \"民间借贷纠纷\": [\"《判决文书5》\"], \"危害公共安全罪\": [\"《判决文书2》\"], \"产品责任纠纷\": [\"《判决文书1》\"]}",
+      "prediction": "{'渎职罪': ['《判决文书3》', '《判决文书7》'], '执行案由-行政非诉执行': ['《判决文书4》', '《判决文书6》', '《判决文书9》'], '刑事赔偿': ['《判决文书8》', '《判决文书10》'], '民间借贷纠纷': ['《判决文书5》'], '危害公共安全罪': ['《判决文书2》'], '产品责任纠纷': ['《判决文书1》']}",
+      "raw": "Evaluation evidence: The assistant's answer is identical to the gold answer in terms of content, structure, and specific document titles assigned to each category. It correctly classifies all documents without any hallucinations or omissions. The format matches the requested JSON-like structure perfectly. Therefore, the response is fully accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_20",
+      "id": "7b104919-2fba-44d2-91dd-a56bd2f30e91",
+      "type": "paper",
+      "level": 3,
+      "score": 50.0,
+      "gold": "{\"Reference\": [\"# LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics \"], \"Citation\": [\"# Ensembling Prioritized Hybrid Policies for Multi-agent Pathfinding \"]}",
+      "prediction": "{\"Reference\": [\"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\"], \"Citation\": []}",
+      "raw": "The assistant correctly identified the reference (\"LLM A*...\") but failed to identify the citation (\"Ensembling Prioritized Hybrid Policies...\"), leaving the citation list empty. The gold answer explicitly lists this citation. This omission constitutes a significant error in completeness and accuracy regarding the citation relationship. The assistant missed a key piece of information required by the prompt.\n\nRating: [[50]]"
+    },
+    {
+      "sample_id": "paper_level4_4",
+      "id": "e904afd3-5cb9-4bf7-bbee-9c8defac858c",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Contrastive Decoding: Open-ended Text Generation as Optimization \", \"# An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation \", \"# On the performativity of SDG classifications in large bibliometric databases \"]",
+      "prediction": "[\"Contrastive Decoding: Open-ended Text Generation as Optimization\", \"An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation\", \"On the performativity of SDG classifications in large bibliometric databases\"]",
+      "raw": "Evaluation evidence: The assistant's answer correctly identifies the same three papers in the exact same order as the gold answer, satisfying the requirement for the longest citation chain. The only difference is the removal of the leading hash symbols (#) from the titles in the assistant's output. Since the core content (titles and sequence) is semantically identical and accurate, and no hallucinations or missing key points exist, the answer is fully suitable.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_16",
+      "id": "8878fb61-6996-4984-9774-5ce9fb506d37",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# Mistral 7B \"], \"Citation\": [\"# Sparse Expansion and Neuronal Disentanglement \"]}",
+      "prediction": "{\"Reference\": [\"Mistral 7B\"], \"Citation\": [\"Sparse Expansion and Neuronal Disentanglement\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the removal of the \"#\" prefix in the titles, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing information are present. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_481",
+      "id": "7f89958b-a17a-4fca-81b4-6138fe12f774",
+      "type": "legal",
+      "level": 3,
+      "score": 20.0,
+      "gold": "{\"劳动争议，人事争议\": [\"《判决文书5》\"], \"危害公共安全罪\": [\"《判决文书2》\", \"《判决文书3》\", \"《判决文书4》\"], \"民事案由-合同，无因管理，不当得利纠纷\": [\"《判决文书1》\", \"《判决文书6》\"], \"适用特殊程序案件案由\": [\"《判决文书8》\", \"《判决文书9》\"], \"用益物权纠纷\": [\"《判决文书7》\"]}",
+      "prediction": "{'劳动争议，人事争议': ['《判决文书5》'], '危害公共安全罪': ['《判决文书2》', '《判决文书3》', '《判决文书4》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书1》', '《判决文书6》', '《判决文书7》', '《判决文书8》'], '适用特殊程序案件案由': [], '用益物权纠纷': []}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant inaccuracies compared to the gold answer. It incorrectly classified \"判决文书7\" (should be 用益物权纠纷) and \"判决文书8\" (should be 适用特殊程序案件案由) into \"民事案由-合同，无因管理，不当得利纠纷\". Furthermore, it failed to list any documents for \"适用特殊程序案件案由\" and \"用益物权纠纷\", leaving those categories empty despite the gold answer containing specific entries. This demonstrates a failure in accuracy and completeness.\nRating: [[20]]"
+    },
+    {
+      "sample_id": "financial_level2_1055",
+      "id": "0e8fb8c8-0b73-4d77-984f-d05392fdebab",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "百亚股份",
+      "prediction": "Chongqing Baiya Hygiene Products Co., Ltd.",
+      "raw": "Evaluation evidence: The assistant correctly identified the company with the highest weighted average return on net assets. Although the gold answer is in Chinese (\"百亚股份\") and the assistant responded in English (\"Chongqing Baiya Hygiene Products Co., Ltd.\"), the entity refers to the exact same company. The answer is accurate, contains no hallucinations, and fully addresses the core of the question. The language difference is minor given the semantic equivalence.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level4_512",
+      "id": "d07b0a9b-5214-4236-afc5-dd7118814750",
+      "type": "legal",
+      "level": 4,
+      "score": 100.0,
+      "gold": "{\"《判决文书1》\": \"判决结果5\", \"《判决文书2》\": \"判决结果4\", \"《判决文书3》\": \"判决结果1\", \"《判决文书4》\": \"判决结果7\", \"《判决文书5》\": \"判决结果2\", \"《判决文书6》\": \"判决结果8\", \"《判决文书7》\": \"判决结果6\", \"《判决文书8》\": \"判决结果3\"}",
+      "prediction": "{\"《判决文书1》\": \"判决结果5\", \"《判决文书2》\": \"判决结果4\", \"《判决文书3》\": \"判决结果1\", \"《判决文书4》\": \"判决结果7\", \"《判决文书5》\": \"判决结果2\", \"《判决文书6》\": \"判决结果8\", \"《判决文书7》\": \"判决结果6\", \"《判决文书8》\": \"判决结果3\"}",
+      "raw": "Evaluation evidence: The assistant's predicted answer is identical to the provided gold answer in terms of content, structure, and mapping of judgment documents to result numbers. It correctly follows the requested JSON format and includes all eight required mappings without any hallucinations or omissions. The response is accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "financial_level2_1051",
+      "id": "95113326-325c-4941-b1ad-e334a2296a8e",
+      "type": "financial",
+      "level": 2,
+      "score": 100.0,
+      "gold": "盾安环境",
+      "prediction": "浙江盾安人工环境股份有限公司",
+      "raw": "Evaluation evidence: The assistant correctly identified the company with the highest capital reserve. The gold answer \"盾安环境\" is the common short name for \"浙江盾安人工环境股份有限公司\" provided by the assistant. The semantic meaning is identical, and the answer is accurate without hallucinations. It fully addresses the user's question based on the implied context of the financial reports.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_33",
+      "id": "1df3da1b-87c8-4692-9ec7-83d1b0e9caa3",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# Mistral 7B \"], \"Citation\": [\"# Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting \"]}",
+      "prediction": "{\"Reference\": [\"Mistral 7B\"], \"Citation\": [\"Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting\"]}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, correctly identifying the reference and citation titles. The only difference is the removal of the \"#\" prefix in the assistant's output, which appears to be a formatting artifact in the gold answer rather than part of the actual title. The JSON structure is correct, and no hallucinations or missing information are present. The response fully meets the accuracy and completeness criteria.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "legal_level3_486",
+      "id": "26cdc2b5-3d22-4a76-95db-81ef6078cc40",
+      "type": "legal",
+      "level": 3,
+      "score": 40.0,
+      "gold": "{\"行政行为-行政监督\": [\"《判决文书1》\", \"《判决文书2》\", \"《判决文书8》\"], \"执行案由-对下级法院执行异议裁定的复议\": [\"《判决文书6》\"], \"行政行为-行政合同\": [\"《判决文书9》\"], \"行政主体-民政行政管理（民政）\": [\"《判决文书3》\", \"《判决文书5》\"], \"与公司，证券，保险，票据等有关的民事纠纷\": [\"《判决文书4》\", \"《判决文书7》\"]}",
+      "prediction": "{'行政行为-行政监督': ['《判决文书1》', '《判决文书2》', '《判决文书3》', '《判决文书8》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书6》'], '行政行为-行政合同': ['《判决文书5》', '《判决文书9》'], '行政主体-民政行政管理（民政）': [], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书4》', '《判决文书7》']}",
+      "raw": "Evaluation evidence: The assistant's answer contains significant classification errors compared to the gold answer. Specifically, it incorrectly assigned \"《判决文书3》\" to '行政行为-行政监督' instead of '行政主体-民政行政管理（民政）', and \"《判决文书5》\" to '行政行为-行政合同' instead of '行政主体-民政行政管理（民政）'. Consequently, the '行政主体-民政行政管理（民政）' category is empty in the assistant's response, whereas it should contain two documents. These misclassifications violate the accuracy criterion.\nRating: [[40]]"
+    },
+    {
+      "sample_id": "financial_level1_922",
+      "id": "efa6f4df-2bc5-4cbe-ae2b-0b72ee71294c",
+      "type": "financial",
+      "level": 1,
+      "score": 100.0,
+      "gold": "310,617,164.36",
+      "prediction": "310,617,164.36 元",
+      "raw": "Evaluation evidence: The assistant's answer provides the exact numerical value found in the gold answer (310,617,164.36). The addition of the currency unit \"元\" (Yuan) is contextually appropriate and does not alter the semantic meaning or accuracy of the data. There are no hallucinations, and the answer is complete regarding the specific question asked. The response strictly adheres to the provided information without unnecessary elaboration.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level4_3",
+      "id": "cd618a43-7176-432d-b21e-432e5c2ca4a7",
+      "type": "paper",
+      "level": 4,
+      "score": 100.0,
+      "gold": "[\"# Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems \", \"# A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data \"]",
+      "prediction": "[\"Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems\", \"A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data\"]",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer, listing the correct paper titles in the required order. The only difference is the removal of the leading hash symbols (#) present in the gold answer, which are likely formatting artifacts rather than part of the actual titles. The assistant correctly followed the list format and the linear citation chain requirement without hallucinations or missing key points. The response is accurate and complete.\nRating: [[100]]"
+    },
+    {
+      "sample_id": "paper_level3_22",
+      "id": "9b982095-daad-4632-9573-b0d7037dd6a7",
+      "type": "paper",
+      "level": 3,
+      "score": 100.0,
+      "gold": "{\"Reference\": [\"# LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET \", \"# Can Large Language Models Really Improve by Self-critiquing Their Own Plans? \"], \"Citation\": []}",
+      "prediction": "{\"Reference\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\"], \"Citation\": []}",
+      "raw": "Evaluation evidence: The assistant's answer is semantically identical to the gold answer. It correctly identifies the two reference papers and the empty citation list. The only differences are the order of the reference titles and minor capitalization variations (e.g., \"MoDELS\" vs \"MODELS\"), which do not affect the semantic correctness or the required JSON structure. The content is accurate, complete, and free of hallucinations.\nRating: [[100]]"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+Question:
+{question}
+
+Instruction:
+{instruction}
+
+All documents in this sample:
+{all_docs_list}
+
+You are currently processing {doc_id} ({doc_title}).
+Its structure (anchors in document order) is:
+{doc_map}
+
+
+{accumulated_trace}
+
+When you stop, your <answer> must be a single JSON object with `scan_result`
+(one of evidence_found / negative_evidence_found / irrelevant_document /
+insufficient_evidence) and `records[]`. Each record has who / what / when /
+where / why / how / source / found_relation as defined in the system message.
+Do not emit raw verbatim strings outside a record's `source.verbatim`.
