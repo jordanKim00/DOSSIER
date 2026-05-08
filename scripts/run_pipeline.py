@@ -53,6 +53,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the DOSSIER pipeline.")
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
     parser.add_argument("--output_dir", type=str, default=None)
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=-1,
+        help="Run only the first N records. Values <= 0 run the full input.",
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_refine_rounds", type=int, default=6)
     parser.add_argument(
@@ -175,7 +181,7 @@ def main() -> None:
     output_dir = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
     layout = ensure_layout(output_dir)
 
-    records = load_records(input_path)
+    records = load_records(input_path, limit=args.limit if args.limit > 0 else None)
     manifest = build_manifest(records)
     save_manifest(manifest, layout["root"] / "manifest.json")
 

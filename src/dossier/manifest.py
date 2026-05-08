@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+import json
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Sequence
+from typing import Any, Dict, List, Optional, Sequence
 
 from .common import read_jsonl, write_json
 
@@ -24,8 +25,20 @@ class ManifestItem:
         return payload
 
 
-def load_records(path: Path) -> List[Dict[str, Any]]:
-    return read_jsonl(path)
+def load_records(path: Path, limit: Optional[int] = None) -> List[Dict[str, Any]]:
+    if limit is None or limit <= 0:
+        return read_jsonl(path)
+
+    rows: List[Dict[str, Any]] = []
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            rows.append(json.loads(line))
+            if len(rows) >= limit:
+                break
+    return rows
 
 
 def build_manifest(records: Sequence[Dict[str, Any]]) -> List[ManifestItem]:

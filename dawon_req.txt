@@ -1,0 +1,46 @@
+# Dawon DOSSIER + Qwen3.5-27B runtime.
+#
+# Tested against the local ragteamvenv stack in this workspace:
+#   Python 3.10.14, torch 2.10.0, transformers 4.57.6, vllm 0.18.1.
+#
+# Install:
+#   python3 -m venv .venv-dawon
+#   source .venv-dawon/bin/activate
+#   python -m pip install --upgrade pip setuptools wheel
+#   python -m pip install -r dawon_req.txt
+#   python -m pip install -e .
+#
+# The extra indexes let pip resolve CUDA/vLLM wheels on fresh GPU servers.
+--extra-index-url https://download.pytorch.org/whl/cu128
+--extra-index-url https://wheels.vllm.ai/nightly
+
+torch==2.10.0
+torchvision==0.25.0
+torchaudio==2.10.0
+vllm==0.18.1
+transformers==4.57.6
+tokenizers==0.22.2
+accelerate==1.13.0
+safetensors==0.7.0
+huggingface-hub==0.36.2
+sentencepiece==0.2.1
+tiktoken==0.12.0
+
+openai==2.24.0
+python-dotenv==1.2.2
+httpx==0.28.1
+requests==2.33.1
+tqdm==4.67.3
+numpy==2.2.6
+PyYAML==6.0.3
+pydantic==2.12.5
+protobuf==6.33.6
+anthropic==0.88.0
+
+fastapi==0.135.3
+uvicorn==0.42.0
+sse-starlette==3.3.4
+lm-format-enforcer==0.11.3
+outlines_core==0.2.11
+partial-json-parser==0.2.1.1.post7
+pillow==12.2.0
