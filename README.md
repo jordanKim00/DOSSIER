@@ -129,9 +129,9 @@ Per-stage token budgets (with `max-model-len = 260000`):
 
 | Stage | `max_output_tokens` | Implied input cap |
 |---|---:|---:|
-| TOC builder | 150 000 | 110 000 |
-| Search agent | 125 000 | 135 000 |
-| Composer | 50 000 | 210 000 |
+| TOC builder | 16 384 | 243 616 |
+| Search agent | 8 192 | 251 808 |
+| Composer | 16 384 | 243 616 |
 | Formatter | 8 192 | 251 808 |
 
 Run directly:

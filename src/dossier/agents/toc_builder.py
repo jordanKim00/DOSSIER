@@ -276,7 +276,7 @@ class TOCBuilder:
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=150000,
+            max_output_tokens=16384,
             metadata={"module": "toc_builder", "doc_title": doc["doc_title"]},
         )
 

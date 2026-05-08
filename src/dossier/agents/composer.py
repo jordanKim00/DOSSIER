@@ -131,7 +131,7 @@ class Composer:
         payload, raw_text = self.llm.generate_json(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=50000,
+            max_output_tokens=16384,
             metadata={"module": "composer"},
         )
 

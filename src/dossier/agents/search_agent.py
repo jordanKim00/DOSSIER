@@ -108,7 +108,7 @@ class SearchAgent:
         return self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=125000,
+            max_output_tokens=8192,
             metadata={"module": "search_agent", "phase": "plan_search", "doc_id": doc_id},
         )
 
