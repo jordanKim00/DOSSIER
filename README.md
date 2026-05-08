@@ -7,7 +7,7 @@ submission repository.
 
 ## Pipeline
 
-![DOSSIER pipeline](DOSSIER.png)
+![DOSSIER pipeline](DOSSIER.png?v=2)
 
 ```text
 TOCBuilder -> SearchAgent -> Composer -> Formatter
