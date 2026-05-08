@@ -118,8 +118,14 @@ if [[ -n "${REASONING_PARSER}" ]]; then
 fi
 
 echo "Starting vLLM server on ${HOST}:${PORT}" | tee "${RUN_LOG}"
+# Allow `--max-model-len` to exceed the model's native max_position_embeddings
+# (we extend Llama-3.1's 128K to 260K via linear RoPE in EXTRA_ARGS).
+# Set DOSSIER_VLLM_ALLOW_LONG_MAX_MODEL_LEN=0 to disable this safety bypass.
+ALLOW_LONG="${DOSSIER_VLLM_ALLOW_LONG_MAX_MODEL_LEN:-1}"
 # shellcheck disable=SC2086
-setsid env CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}" "${VLLM_PYTHON}" -m vllm.entrypoints.openai.api_server \
+setsid env CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}" \
+  VLLM_ALLOW_LONG_MAX_MODEL_LEN="${ALLOW_LONG}" \
+  "${VLLM_PYTHON}" -m vllm.entrypoints.openai.api_server \
   --model "${MODEL_PATH}" \
   --served-model-name "${SERVED_MODEL_NAME}" \
   --tensor-parallel-size "${TENSOR_PARALLEL_SIZE}" \
