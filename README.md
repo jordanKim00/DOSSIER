@@ -84,6 +84,25 @@ Loong/data/loong_process.jsonl
 
 You can also pass `--input_path`.
 
+## Model
+
+The default backbone is **`meta-llama/Llama-3.1-8B-Instruct`** served via vLLM.
+The native context is 128K; we extend it to 260K via a 2.0× linear RoPE override
+so all Loong sets fit in a single forward.
+
+Download with the Hugging Face CLI (you need an HF account that has accepted
+the Llama 3.1 license):
+
+```bash
+huggingface-cli login --token $HF_TOKEN
+mkdir -p models
+huggingface-cli download meta-llama/Llama-3.1-8B-Instruct \
+  --local-dir models/Llama-3.1-8B-Instruct
+```
+
+Only the safetensors shards + tokenizer are required by vLLM — the optional
+`original/` PyTorch weights can be deleted after the download.
+
 ## Run
 
 Use an existing OpenAI-compatible server:
@@ -91,16 +110,29 @@ Use an existing OpenAI-compatible server:
 ```bash
 export OPENAI_BASE_URL=http://127.0.0.1:8000/v1
 export OPENAI_API_KEY=EMPTY
-export OPENAI_MODEL=Qwen3.5-27B
+export OPENAI_MODEL=models/Llama-3.1-8B-Instruct
 bash scripts/run_existing_server_full.sh --force
 ```
 
 Launch vLLM and automatically stop it when the run ends:
 
 ```bash
-export DOSSIER_VLLM_MODEL_PATH=/path/to/Qwen3.5-27B
+export DOSSIER_VLLM_MODEL_PATH=models/Llama-3.1-8B-Instruct
+export DOSSIER_VLLM_MAX_MODEL_LEN=260000
+# Llama-3.1: blank reasoning parser; Qwen3.5: set to "qwen3"
+export DOSSIER_VLLM_REASONING_PARSER=
+# 2× linear RoPE extension is the default in `default.env.example`
 bash scripts/run_dossier_full.sh
 ```
+
+Per-stage token budgets (with `max-model-len = 260000`):
+
+| Stage | `max_output_tokens` | Implied input cap |
+|---|---:|---:|
+| TOC builder | 150 000 | 110 000 |
+| Search agent | 125 000 | 135 000 |
+| Composer | 50 000 | 210 000 |
+| Formatter | 8 192 | 251 808 |
 
 Run directly:
 
