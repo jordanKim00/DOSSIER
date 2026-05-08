@@ -1,4 +1,4 @@
-# DOSSIER
+# DOSSIER: Document-Organized Section-wise Search and Synthesis for Interpretable Multi-Document Evidence Reasoning
 
 DOSSIER is a document-structured, evidence-centric multi-document reasoning
 pipeline. It keeps the current v2-v2-v1-v1 experiment logic while packaging the
@@ -6,6 +6,8 @@ code, prompts, scripts, benchmark checkout, and compact logs into a cleaner
 submission repository.
 
 ## Pipeline
+
+![DOSSIER pipeline](DOSSIER.png)
 
 ```text
 TOCBuilder -> SearchAgent -> Composer -> Formatter
