@@ -16,3 +16,7 @@ Loong/src/tmp.json
 logs/runs/*/samples/
 logs/runs/*/vllm.log
 *.tmp
+full/loong_process (1).jsonl
+full/loong_process.jsonl
+full/loong_process (1).jsonl
+full/loong_process.jsonl

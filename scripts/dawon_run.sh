@@ -4,11 +4,11 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
 
-VENV_DIR="${DAWON_VENV_DIR:-${PROJECT_ROOT}/.venv-dawon}"
+VENV_DIR="${DAWON_VENV_DIR:-${PROJECT_ROOT}/../venvs/dossiervenv}"
 PYTHON_BIN="${DAWON_PYTHON:-${VENV_DIR}/bin/python}"
 REQ_FILE="${DAWON_REQ_FILE:-${PROJECT_ROOT}/dawon_req.txt}"
 
-INPUT_PATH="${DAWON_INPUT_PATH:-${PROJECT_ROOT}/Loong/full/loong_process.jsonl}"
+INPUT_PATH="${DAWON_INPUT_PATH:-}"
 OUTPUT_DIR="${DAWON_OUTPUT_DIR:-${PROJECT_ROOT}/logs/runs/dawon_qwen35_27b_full}"
 RUN_LOG="${DAWON_RUN_LOG:-${OUTPUT_DIR}/run.log}"
 VLLM_LOG="${DAWON_VLLM_LOG:-${OUTPUT_DIR}/vllm.log}"
@@ -17,7 +17,7 @@ HOST="${DAWON_VLLM_HOST:-127.0.0.1}"
 PORT="${DAWON_VLLM_PORT:-8000}"
 MODEL_PATH="${DAWON_MODEL_PATH:-${PROJECT_ROOT}/models/Qwen3.5-27B}"
 SERVED_MODEL_NAME="${DAWON_SERVED_MODEL_NAME:-Qwen3.5-27B}"
-CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0,1}"
+CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-4,5,6,7}"
 TENSOR_PARALLEL_SIZE="${DAWON_VLLM_TP_SIZE:-}"
 MAX_MODEL_LEN="${DAWON_MAX_MODEL_LEN:-262144}"
 GPU_MEMORY_UTILIZATION="${DAWON_GPU_MEMORY_UTILIZATION:-0.92}"
@@ -25,6 +25,10 @@ MAX_NUM_SEQS="${DAWON_MAX_NUM_SEQS:-1}"
 DTYPE="${DAWON_DTYPE:-bfloat16}"
 HEALTH_TIMEOUT="${DAWON_VLLM_HEALTH_TIMEOUT:-2400}"
 INSTALL_TIMEOUT_SECONDS="${DAWON_INSTALL_TIMEOUT_SECONDS:-7200}"
+ALLOW_LONG_MAX_MODEL_LEN="${DAWON_VLLM_ALLOW_LONG_MAX_MODEL_LEN:-1}"
+REASONING_PARSER="${DAWON_REASONING_PARSER:-qwen3}"
+GENERATION_CONFIG="${DAWON_GENERATION_CONFIG:-vllm}"
+ENFORCE_EAGER="${DAWON_ENFORCE_EAGER:-1}"
 
 SERVER_PID=""
 
@@ -122,8 +126,27 @@ sys.exit(1)
 PY
 }
 
-if [[ ! -f "${INPUT_PATH}" ]]; then
-  echo "Input file not found: ${INPUT_PATH}" >&2
+if [[ -z "${INPUT_PATH}" ]]; then
+  for candidate in \
+    "${PROJECT_ROOT}/full/loong_process (1).jsonl" \
+    "${PROJECT_ROOT}/full/loong_process.jsonl" \
+    "${PROJECT_ROOT}/Loong/full/loong_process.jsonl" \
+    "${PROJECT_ROOT}/Loong/data/loong_process.jsonl" \
+    "${PROJECT_ROOT}/../Loong_long/loong_process.jsonl"; do
+    if [[ -f "${candidate}" ]]; then
+      INPUT_PATH="${candidate}"
+      break
+    fi
+  done
+fi
+
+if [[ -z "${INPUT_PATH}" || ! -f "${INPUT_PATH}" ]]; then
+  echo "Loong input file not found. Set DAWON_INPUT_PATH or place one of:" >&2
+  echo "  ${PROJECT_ROOT}/full/loong_process (1).jsonl" >&2
+  echo "  ${PROJECT_ROOT}/full/loong_process.jsonl" >&2
+  echo "  ${PROJECT_ROOT}/Loong/full/loong_process.jsonl" >&2
+  echo "  ${PROJECT_ROOT}/Loong/data/loong_process.jsonl" >&2
+  echo "  ${PROJECT_ROOT}/../Loong_long/loong_process.jsonl" >&2
   exit 1
 fi
 
@@ -171,10 +194,19 @@ VLLM_ARGS=(
   --host "${HOST}"
   --port "${PORT}"
   --trust-remote-code
-  --enforce-eager
-  --reasoning-parser qwen3
-  --generation-config vllm
 )
+
+if [[ "${ENFORCE_EAGER}" == "1" ]] && vllm_supports_arg "--enforce-eager"; then
+  VLLM_ARGS+=(--enforce-eager)
+fi
+
+if [[ -n "${REASONING_PARSER}" ]] && vllm_supports_arg "--reasoning-parser"; then
+  VLLM_ARGS+=(--reasoning-parser "${REASONING_PARSER}")
+fi
+
+if [[ -n "${GENERATION_CONFIG}" ]] && vllm_supports_arg "--generation-config"; then
+  VLLM_ARGS+=(--generation-config "${GENERATION_CONFIG}")
+fi
 
 if [[ "${DAWON_LANGUAGE_MODEL_ONLY:-1}" == "1" ]] && vllm_supports_arg "--language-model-only"; then
   VLLM_ARGS+=(--language-model-only)
@@ -185,7 +217,9 @@ if [[ "${DAWON_DISABLE_CUSTOM_ALL_REDUCE:-0}" == "1" ]] && vllm_supports_arg "--
 fi
 
 echo "Starting vLLM: model=${MODEL_PATH}, gpus=${CUDA_VISIBLE_DEVICES}, tp=${TENSOR_PARALLEL_SIZE}, max_len=${MAX_MODEL_LEN}" | tee "${RUN_LOG}"
-setsid env CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}" "${PYTHON_BIN}" "${VLLM_ARGS[@]}" \
+setsid env CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}" \
+  VLLM_ALLOW_LONG_MAX_MODEL_LEN="${ALLOW_LONG_MAX_MODEL_LEN}" \
+  "${PYTHON_BIN}" "${VLLM_ARGS[@]}" \
   > "${VLLM_LOG}" 2>&1 &
 SERVER_PID=$!
 export DAWON_VLLM_SERVER_PID="${SERVER_PID}"

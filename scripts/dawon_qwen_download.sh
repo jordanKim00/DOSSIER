@@ -4,7 +4,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd)"
 
-PYTHON_BIN="${DAWON_PYTHON:-${PROJECT_ROOT}/.venv-dawon/bin/python}"
+VENV_DIR="${DAWON_VENV_DIR:-${PROJECT_ROOT}/../venvs/dossiervenv}"
+PYTHON_BIN="${DAWON_PYTHON:-${VENV_DIR}/bin/python}"
 if [[ ! -x "${PYTHON_BIN}" ]]; then
   PYTHON_BIN="${DAWON_DOWNLOAD_PYTHON:-python3}"
 fi
